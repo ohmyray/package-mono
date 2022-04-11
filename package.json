@@ -1,0 +1,22 @@
+{
+  "name": "package-mono",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm recursive run build",
+    "clean": "pnpm recursive exec -- rm -rf node_modules; rm shrinkwrap.yaml; rm -rf node_modules"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}

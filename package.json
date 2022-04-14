@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm recursive run build",
+    "preinstall": "node ./scripts/preinstall.js",
+    "build": "pnpm run build --filter '*'",
+    "rbuild": "pnpm recursive run build",
     "clean": "pnpm recursive exec -- rm -rf node_modules; rm shrinkwrap.yaml; rm -rf node_modules"
   },
   "keywords": [],
@@ -17,6 +19,7 @@
     "webpack-merge": "^5.8.0"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
   }
 }
